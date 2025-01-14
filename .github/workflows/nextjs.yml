@@ -27,19 +27,24 @@ jobs:
     env:
       NEXT_PUBLIC_BASE_PATH: /local-ai-chatbot-studio
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: 'npm'
+      - name: Clean install dependencies
+        run: |
+          rm -rf node_modules
+          rm -f package-lock.json
+          npm install --legacy-peer-deps
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
           static_site_generator: next
-      - name: Install dependencies
-        run: npm ci
       - name: Build with Next.js
         run: npm run build
       - name: Upload artifact
