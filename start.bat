@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\markel\FreakBoB\backup\project"
+cd /d "C:\Users\markel\Live2D AI-Chatbot"
 
 echo Starting Next.js development server...
 start /b cmd /c "npm run dev > temp.txt 2>&1"

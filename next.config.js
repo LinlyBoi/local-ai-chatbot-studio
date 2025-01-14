@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/local-ai-chatbot-studio',
   images: {
     unoptimized: true,
     remotePatterns: [
