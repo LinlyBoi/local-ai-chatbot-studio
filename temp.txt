@@ -1,0 +1,37 @@
+
+> nextjs@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.2
+   - Local:        http://localhost:3000
+   - Network:      http://25.65.10.85:3000
+
+ ✓ Starting...
+ ✓ Ready in 1901ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.3s (1615 modules)
+ GET / 200 in 2780ms
+ ✓ Compiled in 519ms (806 modules)
+ GET / 200 in 25ms
+ ✓ Compiled /api/chat in 447ms (1619 modules)
+ POST /api/chat 200 in 7119ms
+ GET / 200 in 159ms
+ POST /api/chat 200 in 1842ms
+ GET / 200 in 24ms
+ POST /api/chat 200 in 966ms
+ POST /api/chat 200 in 1346ms
+ POST /api/chat 200 in 2419ms
+ GET / 200 in 24ms
+ POST /api/chat 200 in 676ms
+ POST /api/chat 200 in 1498ms
+ POST /api/chat 200 in 1631ms
+ POST /api/chat 200 in 2793ms
+ GET / 200 in 22ms
+ POST /api/chat 200 in 1522ms
+ GET / 200 in 20ms
+ POST /api/chat 200 in 1576ms
+ GET / 200 in 20ms
+ POST /api/chat 200 in 3356ms
+ POST /api/chat 200 in 2396ms
+ GET / 200 in 19ms
+^C^C

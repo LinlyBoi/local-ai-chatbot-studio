@@ -1,0 +1,6594 @@
+{
+  "114": {
+    "inputs": {
+      "image": "stars_galaxies-wallpaper-1280x1024.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "115": {
+    "inputs": {
+      "pixels": [
+        "114",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "116": {
+    "inputs": {
+      "image": "stars_galaxies-wallpaper-1280x1024.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage"
+  },
+  "117": {
+    "inputs": {
+      "pixels": [
+        "116",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1172": {
+    "inputs": {
+      "width": 728,
+      "height": 768,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "1173": {
+    "inputs": {
+      "ckpt_name": "tPonynai3_v65.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "1174": {
+    "inputs": {
+      "ckpt_name": "tPonynai3_v65.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "1179": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "1173",
+        0
+      ],
+      "clip": [
+        "1173",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "1180": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "1174",
+        0
+      ],
+      "clip": [
+        "1174",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  },
+  "1196": {
+    "inputs": {
+      "images": [
+        "1190:54",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1197": {
+    "inputs": {
+      "images": [
+        "1190:50",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1198": {
+    "inputs": {
+      "images": [
+        "1190:46",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1199": {
+    "inputs": {
+      "images": [
+        "1190:42",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1200": {
+    "inputs": {
+      "images": [
+        "1190:38",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1201": {
+    "inputs": {
+      "images": [
+        "1190:34",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1202": {
+    "inputs": {
+      "images": [
+        "1190:30",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1203": {
+    "inputs": {
+      "images": [
+        "1190:26",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1204": {
+    "inputs": {
+      "images": [
+        "1190:22",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1205": {
+    "inputs": {
+      "images": [
+        "1190:18",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1206": {
+    "inputs": {
+      "images": [
+        "1190:14",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "1207": {
+    "inputs": {
+      "images": [
+        "1190:10",
+        0
+      ]
+    },
+    "class_type": "PreviewImage"
+  },
+  "584:2": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "584:5": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "584:6": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "584:7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "584:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "584:8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "584:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "584:9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "584:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "584:10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "584:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "584:11": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 495401928020368,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "584:5",
+        0
+      ],
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "584:2",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "584:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 144944663547299,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "584:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "584:13": {
+    "inputs": {
+      "samples": [
+        "584:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "584:14": {
+    "inputs": {
+      "pixels": [
+        "584:13",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "581:2": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "581:5": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "581:6": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "581:7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "581:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "581:8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "581:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "581:9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "581:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "581:10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "581:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "581:11": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 751979782820095,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "581:5",
+        0
+      ],
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "581:2",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "581:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 94934698614145,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "581:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "581:13": {
+    "inputs": {
+      "samples": [
+        "581:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "581:14": {
+    "inputs": {
+      "pixels": [
+        "581:13",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "587:2": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "587:5": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "587:6": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "587:7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "587:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "587:8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "587:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "587:9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "587:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "587:10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "587:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "587:11": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 158059442010210,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "587:5",
+        0
+      ],
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "587:2",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "587:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 319142443330014,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "587:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "587:13": {
+    "inputs": {
+      "samples": [
+        "587:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "587:14": {
+    "inputs": {
+      "pixels": [
+        "587:13",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "590:2": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "590:5": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "590:6": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "590:7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "590:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "590:8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "590:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "590:9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "590:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "590:10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "590:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "590:11": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 872368480834553,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "590:5",
+        0
+      ],
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "590:2",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "590:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 676992084681542,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "590:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "590:13": {
+    "inputs": {
+      "samples": [
+        "590:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "590:14": {
+    "inputs": {
+      "pixels": [
+        "590:13",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "578:2": {
+    "inputs": {
+      "width": 512,
+      "height": 512,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "578:5": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "578:6": {
+    "inputs": {
+      "lora_name": "Small_pp_v1.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1
+    },
+    "class_type": "LoraLoader"
+  },
+  "578:7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "578:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "578:8": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "578:5",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "578:9": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "578:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "578:10": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "578:6",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "578:11": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1028657111021967,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "578:5",
+        0
+      ],
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "578:2",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "578:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 56501433969548,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "578:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "578:13": {
+    "inputs": {
+      "samples": [
+        "578:12",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "578:14": {
+    "inputs": {
+      "pixels": [
+        "578:13",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1192:0": {
+    "inputs": {
+      "ckpt_name": "tPonynai3_v65.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "1192:1": {
+    "inputs": {
+      "ckpt_name": "tPonynai3_v65.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "582:0": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 164337042962354,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "584:14",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:1": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:0",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:2": {
+    "inputs": {
+      "samples": [
+        "582:1",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:3": {
+    "inputs": {
+      "pixels": [
+        "582:2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 668655192858346,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:3",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:5": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:4",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:6": {
+    "inputs": {
+      "samples": [
+        "582:5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:7": {
+    "inputs": {
+      "pixels": [
+        "582:6",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 242197036409996,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:7",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:9": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:10": {
+    "inputs": {
+      "samples": [
+        "582:9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:11": {
+    "inputs": {
+      "pixels": [
+        "582:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 273938995905387,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:13": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 15,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:14": {
+    "inputs": {
+      "samples": [
+        "582:13",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:15": {
+    "inputs": {
+      "pixels": [
+        "582:14",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 128232030701461,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:17": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:18": {
+    "inputs": {
+      "samples": [
+        "582:17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:19": {
+    "inputs": {
+      "pixels": [
+        "582:18",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 323083333313939,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:21": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:22": {
+    "inputs": {
+      "samples": [
+        "582:21",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:23": {
+    "inputs": {
+      "pixels": [
+        "582:22",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 689400069811306,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:25": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:26": {
+    "inputs": {
+      "samples": [
+        "582:25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:27": {
+    "inputs": {
+      "pixels": [
+        "582:26",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 375255655200981,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:29": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:30": {
+    "inputs": {
+      "samples": [
+        "582:29",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:31": {
+    "inputs": {
+      "pixels": [
+        "582:30",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 635318320444647,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:33": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:34": {
+    "inputs": {
+      "samples": [
+        "582:33",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:35": {
+    "inputs": {
+      "pixels": [
+        "582:34",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 563474781028956,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:8",
+        0
+      ],
+      "latent_image": [
+        "582:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:37": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:38": {
+    "inputs": {
+      "samples": [
+        "582:37",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:39": {
+    "inputs": {
+      "pixels": [
+        "582:38",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "582:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1055074687941742,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "584:7",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:41": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "584:6",
+        0
+      ],
+      "positive": [
+        "584:9",
+        0
+      ],
+      "negative": [
+        "584:10",
+        0
+      ],
+      "latent_image": [
+        "582:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "582:42": {
+    "inputs": {
+      "samples": [
+        "582:41",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "582:43": {
+    "inputs": {
+      "pixels": [
+        "582:42",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:0": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 181363825196740,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "581:14",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:1": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:0",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:2": {
+    "inputs": {
+      "samples": [
+        "579:1",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:3": {
+    "inputs": {
+      "pixels": [
+        "579:2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 457089110528184,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:3",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:5": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:4",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:6": {
+    "inputs": {
+      "samples": [
+        "579:5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:7": {
+    "inputs": {
+      "pixels": [
+        "579:6",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 302874924972723,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:7",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:9": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:10": {
+    "inputs": {
+      "samples": [
+        "579:9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:11": {
+    "inputs": {
+      "pixels": [
+        "579:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 286767501557150,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:13": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 15,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:14": {
+    "inputs": {
+      "samples": [
+        "579:13",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:15": {
+    "inputs": {
+      "pixels": [
+        "579:14",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 356832101424980,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:17": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:18": {
+    "inputs": {
+      "samples": [
+        "579:17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:19": {
+    "inputs": {
+      "pixels": [
+        "579:18",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 128849696969331,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:21": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:22": {
+    "inputs": {
+      "samples": [
+        "579:21",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:23": {
+    "inputs": {
+      "pixels": [
+        "579:22",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 843518014466603,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:25": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:26": {
+    "inputs": {
+      "samples": [
+        "579:25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:27": {
+    "inputs": {
+      "pixels": [
+        "579:26",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 24161829242958,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:29": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:30": {
+    "inputs": {
+      "samples": [
+        "579:29",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:31": {
+    "inputs": {
+      "pixels": [
+        "579:30",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 29703153102820,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:33": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:34": {
+    "inputs": {
+      "samples": [
+        "579:33",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:35": {
+    "inputs": {
+      "pixels": [
+        "579:34",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 379409134506122,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:8",
+        0
+      ],
+      "latent_image": [
+        "579:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:37": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:38": {
+    "inputs": {
+      "samples": [
+        "579:37",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:39": {
+    "inputs": {
+      "pixels": [
+        "579:38",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "579:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 741114051049187,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "581:7",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:41": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "581:6",
+        0
+      ],
+      "positive": [
+        "581:9",
+        0
+      ],
+      "negative": [
+        "581:10",
+        0
+      ],
+      "latent_image": [
+        "579:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "579:42": {
+    "inputs": {
+      "samples": [
+        "579:41",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "579:43": {
+    "inputs": {
+      "pixels": [
+        "579:42",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:0": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 694940334021016,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "587:14",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:1": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:0",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:2": {
+    "inputs": {
+      "samples": [
+        "585:1",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:3": {
+    "inputs": {
+      "pixels": [
+        "585:2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 763679769626374,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:3",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:5": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:4",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:6": {
+    "inputs": {
+      "samples": [
+        "585:5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:7": {
+    "inputs": {
+      "pixels": [
+        "585:6",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 661803141883392,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:7",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:9": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:10": {
+    "inputs": {
+      "samples": [
+        "585:9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:11": {
+    "inputs": {
+      "pixels": [
+        "585:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 613837489463477,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:13": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 15,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:14": {
+    "inputs": {
+      "samples": [
+        "585:13",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:15": {
+    "inputs": {
+      "pixels": [
+        "585:14",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 225192541871941,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:17": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:18": {
+    "inputs": {
+      "samples": [
+        "585:17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:19": {
+    "inputs": {
+      "pixels": [
+        "585:18",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 872791242347740,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:21": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:22": {
+    "inputs": {
+      "samples": [
+        "585:21",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:23": {
+    "inputs": {
+      "pixels": [
+        "585:22",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 451404093136088,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:25": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:26": {
+    "inputs": {
+      "samples": [
+        "585:25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:27": {
+    "inputs": {
+      "pixels": [
+        "585:26",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 698070731016830,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:29": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:30": {
+    "inputs": {
+      "samples": [
+        "585:29",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:31": {
+    "inputs": {
+      "pixels": [
+        "585:30",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 114572933478574,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:33": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:34": {
+    "inputs": {
+      "samples": [
+        "585:33",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:35": {
+    "inputs": {
+      "pixels": [
+        "585:34",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 694164271750023,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:8",
+        0
+      ],
+      "latent_image": [
+        "585:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:37": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:38": {
+    "inputs": {
+      "samples": [
+        "585:37",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:39": {
+    "inputs": {
+      "pixels": [
+        "585:38",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "585:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 962052590612984,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "587:7",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:41": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "587:6",
+        0
+      ],
+      "positive": [
+        "587:9",
+        0
+      ],
+      "negative": [
+        "587:10",
+        0
+      ],
+      "latent_image": [
+        "585:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "585:42": {
+    "inputs": {
+      "samples": [
+        "585:41",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "585:43": {
+    "inputs": {
+      "pixels": [
+        "585:42",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:0": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 740676878505529,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "590:14",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:1": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:0",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:2": {
+    "inputs": {
+      "samples": [
+        "588:1",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:3": {
+    "inputs": {
+      "pixels": [
+        "588:2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 454593314456702,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:3",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:5": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:4",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:6": {
+    "inputs": {
+      "samples": [
+        "588:5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:7": {
+    "inputs": {
+      "pixels": [
+        "588:6",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 197992071137292,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:7",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:9": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:10": {
+    "inputs": {
+      "samples": [
+        "588:9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:11": {
+    "inputs": {
+      "pixels": [
+        "588:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 105572486794128,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:13": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 15,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:14": {
+    "inputs": {
+      "samples": [
+        "588:13",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:15": {
+    "inputs": {
+      "pixels": [
+        "588:14",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 604588820631924,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:17": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:18": {
+    "inputs": {
+      "samples": [
+        "588:17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:19": {
+    "inputs": {
+      "pixels": [
+        "588:18",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1011084754719197,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:21": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:22": {
+    "inputs": {
+      "samples": [
+        "588:21",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:23": {
+    "inputs": {
+      "pixels": [
+        "588:22",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 191947762941323,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:25": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:26": {
+    "inputs": {
+      "samples": [
+        "588:25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:27": {
+    "inputs": {
+      "pixels": [
+        "588:26",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1057739882497561,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:29": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:30": {
+    "inputs": {
+      "samples": [
+        "588:29",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:31": {
+    "inputs": {
+      "pixels": [
+        "588:30",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1015598602419641,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:33": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:34": {
+    "inputs": {
+      "samples": [
+        "588:33",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:35": {
+    "inputs": {
+      "pixels": [
+        "588:34",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 260433955709482,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:8",
+        0
+      ],
+      "latent_image": [
+        "588:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:37": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:38": {
+    "inputs": {
+      "samples": [
+        "588:37",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:39": {
+    "inputs": {
+      "pixels": [
+        "588:38",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "588:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 798401860119888,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "590:7",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:41": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "590:6",
+        0
+      ],
+      "positive": [
+        "590:9",
+        0
+      ],
+      "negative": [
+        "590:10",
+        0
+      ],
+      "latent_image": [
+        "588:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "588:42": {
+    "inputs": {
+      "samples": [
+        "588:41",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "588:43": {
+    "inputs": {
+      "pixels": [
+        "588:42",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:0": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 506742997980731,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "578:14",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:1": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:0",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:2": {
+    "inputs": {
+      "samples": [
+        "576:1",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:3": {
+    "inputs": {
+      "pixels": [
+        "576:2",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 452163568035570,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:3",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:5": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:4",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:6": {
+    "inputs": {
+      "samples": [
+        "576:5",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:7": {
+    "inputs": {
+      "pixels": [
+        "576:6",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 890703051461683,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:7",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:9": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:10": {
+    "inputs": {
+      "samples": [
+        "576:9",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:11": {
+    "inputs": {
+      "pixels": [
+        "576:10",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 410895352675907,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:13": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 15,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:14": {
+    "inputs": {
+      "samples": [
+        "576:13",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:15": {
+    "inputs": {
+      "pixels": [
+        "576:14",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 725608847415886,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:17": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:18": {
+    "inputs": {
+      "samples": [
+        "576:17",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:19": {
+    "inputs": {
+      "pixels": [
+        "576:18",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 809436281892159,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:21": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:22": {
+    "inputs": {
+      "samples": [
+        "576:21",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:23": {
+    "inputs": {
+      "pixels": [
+        "576:22",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 534413841240947,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:25": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:26": {
+    "inputs": {
+      "samples": [
+        "576:25",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:27": {
+    "inputs": {
+      "pixels": [
+        "576:26",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 575410494170512,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:29": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:30": {
+    "inputs": {
+      "samples": [
+        "576:29",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:31": {
+    "inputs": {
+      "pixels": [
+        "576:30",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 31878319129121,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:33": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:34": {
+    "inputs": {
+      "samples": [
+        "576:33",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:35": {
+    "inputs": {
+      "pixels": [
+        "576:34",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1085765913783083,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:8",
+        0
+      ],
+      "latent_image": [
+        "576:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:37": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:38": {
+    "inputs": {
+      "samples": [
+        "576:37",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:39": {
+    "inputs": {
+      "pixels": [
+        "576:38",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "576:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 699946180686152,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "return_with_leftover_noise": "enable",
+      "positive": [
+        "578:7",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:41": {
+    "inputs": {
+      "add_noise": "disable",
+      "noise_seed": 24,
+      "cfg": 7.5,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "enable",
+      "model": [
+        "578:6",
+        0
+      ],
+      "positive": [
+        "578:9",
+        0
+      ],
+      "negative": [
+        "578:10",
+        0
+      ],
+      "latent_image": [
+        "576:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "576:42": {
+    "inputs": {
+      "samples": [
+        "576:41",
+        0
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "576:43": {
+    "inputs": {
+      "pixels": [
+        "576:42",
+        0
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "583:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "584:13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:2",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "583:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "582:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "581:13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:2",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "580:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "579:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "587:13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:2",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "586:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "585:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "590:13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:2",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "589:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "588:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "578:13",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:2",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:6",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "577:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "576:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1191:2": {
+    "inputs": {
+      "text": "score_10, score_9,score_8, score_7, futanari, micro-penis,  tan skin, curly hair, solo, beautiful lighting, unique perspective, brown hair, brown eyes, sexy face,  brown areola, big areola, medium length hair,  penis exposed,",
+      "clip": [
+        "1180",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "1191:3": {
+    "inputs": {
+      "text": "muscular, tan lines, big penis, flat-looking, fully exposed penis, ebony,  big penis, large penis, thick penis, average size penis, butt plug, long penis, chibi, long penis, huge, very big, watermark, nipple covers, Large Penis, Huge Penis, Massive Penis, Enormous Penis, Gigantic Penis, Immense Penis, Colossal Penis, Vast Penis, Grand Penis, Substantial Penis, Tremendous Penis, Monumental Penis, Mighty Penis, Expansive Penis, Extensive Penis, Towering Penis, Prodigious Penis, Hulking Penis, Gargantuan Penis, Stupendous Penis, Titanic Penis, Mammoth Penis, Broad Penis, Voluminous Penis, Ample Penis, Oversized Penis, ugly, deformed, fat, obese",
+      "clip": [
+        "1180",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "1191:4": {
+    "inputs": {
+      "text": "score_10, score_9,score_8, score_7, futanari, micro-penis,  tan skin, curly hair, solo, beautiful lighting, unique perspective, brown hair, brown eyes, sexy face,  brown areola, big areola, medium length hair,  penis exposed,",
+      "clip": [
+        "1179",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "1191:5": {
+    "inputs": {
+      "text": "muscular, tan lines, big penis, flat-looking, fully exposed penis, ebony,  big penis, large penis, thick penis, average size penis, butt plug, long penis, chibi, long penis, huge, very big, watermark, nipple covers, Large Penis, Huge Penis, Massive Penis, Enormous Penis, Gigantic Penis, Immense Penis, Colossal Penis, Vast Penis, Grand Penis, Substantial Penis, Tremendous Penis, Monumental Penis, Mighty Penis, Expansive Penis, Extensive Penis, Towering Penis, Prodigious Penis, Hulking Penis, Gargantuan Penis, Stupendous Penis, Titanic Penis, Mammoth Penis, Broad Penis, Voluminous Penis, Ample Penis, Oversized Penis, ugly, deformed, fat, obese",
+      "clip": [
+        "1179",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "1190:2": {
+    "inputs": {},
+    "class_type": "VAEDecode"
+  },
+  "1190:3": {
+    "inputs": {},
+    "class_type": "VAEEncode"
+  },
+  "1190:4": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 67338771386063,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 7,
+      "return_with_leftover_noise": "disable"
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:5": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 346500635307105,
+      "steps": 7,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 7,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable"
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:8": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 160345007034769,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1179",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1172",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:9": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 424360088568866,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:8",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:10": {
+    "inputs": {
+      "samples": [
+        "1190:9",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:11": {
+    "inputs": {
+      "pixels": [
+        "1190:10",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:12": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 516753847991093,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:11",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:13": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1113590115437513,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:12",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:14": {
+    "inputs": {
+      "samples": [
+        "1190:13",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:15": {
+    "inputs": {
+      "pixels": [
+        "1190:14",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:16": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 519402205391058,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:15",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:17": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 669494948699516,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:16",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:18": {
+    "inputs": {
+      "samples": [
+        "1190:17",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:19": {
+    "inputs": {
+      "pixels": [
+        "1190:18",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:20": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 204996474168779,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:19",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:21": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 716273317300502,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:20",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:22": {
+    "inputs": {
+      "samples": [
+        "1190:21",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:23": {
+    "inputs": {
+      "pixels": [
+        "1190:22",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:24": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 195273053779719,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:23",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:25": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 427456477289487,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:24",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:26": {
+    "inputs": {
+      "samples": [
+        "1190:25",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:27": {
+    "inputs": {
+      "pixels": [
+        "1190:26",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:28": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 650081266353772,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:27",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:29": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 248421283010469,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:28",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:30": {
+    "inputs": {
+      "samples": [
+        "1190:29",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:31": {
+    "inputs": {
+      "pixels": [
+        "1190:30",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:32": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 460272554255411,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:31",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:33": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 721370487386172,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:32",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:34": {
+    "inputs": {
+      "samples": [
+        "1190:33",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:35": {
+    "inputs": {
+      "pixels": [
+        "1190:34",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:36": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 377624342558569,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:35",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:37": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1092852688695217,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:36",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:38": {
+    "inputs": {
+      "samples": [
+        "1190:37",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:39": {
+    "inputs": {
+      "pixels": [
+        "1190:38",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:40": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 848199718615659,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:39",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:41": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 324176753661276,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:40",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:42": {
+    "inputs": {
+      "samples": [
+        "1190:41",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:43": {
+    "inputs": {
+      "pixels": [
+        "1190:42",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:44": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1039463608858246,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:43",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:45": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1006157326539636,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:44",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:46": {
+    "inputs": {
+      "samples": [
+        "1190:45",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:47": {
+    "inputs": {
+      "pixels": [
+        "1190:46",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:48": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 1111010993774494,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:5",
+        0
+      ],
+      "latent_image": [
+        "1190:47",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:49": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 625294435401026,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:48",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:50": {
+    "inputs": {
+      "samples": [
+        "1190:49",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:51": {
+    "inputs": {
+      "pixels": [
+        "1190:50",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1190:52": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 326389895282510,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 0,
+      "end_at_step": 12,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1174",
+        0
+      ],
+      "positive": [
+        "1191:4",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:51",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:53": {
+    "inputs": {
+      "add_noise": "enable",
+      "noise_seed": 758005276744428,
+      "steps": 12,
+      "cfg": 8,
+      "sampler_name": "euler",
+      "scheduler": "normal",
+      "start_at_step": 12,
+      "end_at_step": 10000,
+      "return_with_leftover_noise": "disable",
+      "model": [
+        "1180",
+        0
+      ],
+      "positive": [
+        "1191:2",
+        0
+      ],
+      "negative": [
+        "1191:3",
+        0
+      ],
+      "latent_image": [
+        "1190:52",
+        0
+      ]
+    },
+    "class_type": "KSamplerAdvanced"
+  },
+  "1190:54": {
+    "inputs": {
+      "samples": [
+        "1190:53",
+        0
+      ],
+      "vae": [
+        "1173",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "1190:55": {
+    "inputs": {
+      "pixels": [
+        "1190:54",
+        0
+      ],
+      "vae": [
+        "1174",
+        2
+      ]
+    },
+    "class_type": "VAEEncode"
+  },
+  "1094:0": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:10",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:1": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:14",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:2": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:18",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:22",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:4": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:26",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:5": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:30",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:6": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:34",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:38",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:8": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:42",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:9": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:46",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:10": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:50",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  },
+  "1094:11": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1190:54",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
+  }
+}

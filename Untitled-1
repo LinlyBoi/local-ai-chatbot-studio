@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prompt>
+    <purpose>
+        Analyze and enhance the user interface of a Next.js web application that uses Tailwind CSS, shadcn/ui components, and Lucide React icons, providing specific recommendations for visual improvements while maintaining the existing technical infrastructure.
+    </purpose>
+
+    <instructions>
+        <instruction>Review the current UI implementation focusing on component structure, styling, and user experience.</instruction>
+        <instruction>Suggest improvements that align with modern design principles while utilizing the existing technology stack.</instruction>
+        <instruction>Provide specific recommendations for layout, spacing, animations, and visual hierarchy.</instruction>
+        <instruction>Ensure suggestions maintain compatibility with the dark mode implementation.</instruction>
+        <instruction>Consider accessibility and responsive design in all recommendations.</instruction>
+    </instructions>
+
+    <sections>
+        <design-principles>
+            <principle>Maintain consistent spacing and alignment throughout the interface</principle>
+            <principle>Implement smooth transitions and micro-interactions</principle>
+            <principle>Ensure proper contrast and readability in both light and dark modes</principle>
+        </design-principles>
+
+        <component-improvements>
+            <improvement>Enhance dialog animations and backdrop effects</improvement>
+            <improvement>Refine tag display and interaction patterns</improvement>
+            <improvement>Optimize drawer component transitions and gestures</improvement>
+        </component-improvements>
+
+        <visual-enhancements>
+            <enhancement>Implement gradient accents for visual interest</enhancement>
+            <enhancement>Add subtle hover states and focus indicators</enhancement>
+            <enhancement>Improve loading state visualizations</enhancement>
+        </visual-enhancements>
+    </sections>
+
+    <variables>
+        <variable>[[primary-color]]</variable>
+        <variable>[[accent-color]]</variable>
+        <variable>[[animation-duration]]</variable>
+        <variable>[[border-radius]]</variable>
+    </variables>
+
+    <examples>
+        <example>
+            <input>Dialog component styling</input>
+            <output>Enhance the DialogContent with subtle scale animation on open:
+transform: scale([[animation-scale]]);
+transition-duration: [[animation-duration]];</output>
+        </example>
+        <example>
+            <input>Tag component design</input>
+            <output>Refine tag styling with gradient background:
+background: linear-gradient([[primary-color]], [[accent-color]]);
+border-radius: [[border-radius]];</output>
+        </example>
+        <example>
+            <input>Drawer interaction</input>
+            <output>Add smooth elevation transition:
+box-shadow: [[shadow-value]];
+transition: transform [[animation-duration]] ease-in-out;</output>
+        </example>
+    </examples>
+</prompt>
