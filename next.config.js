@@ -1,69 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/local-ai-chatbot-studio',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'wimg.rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'img.rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'us.rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'api.rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'api-cdn.rule34.xxx',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'safebooru.org',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: '*.rule34.xxx',
-        pathname: '/**',
+        hostname: '**',
       }
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*',
-      },
-    ];
-  },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.(mp4|webm|gif)$/i,
-      type: 'asset/resource',
-    });
-    return config;
-  },
-  devIndicators: {
-    buildActivity: false
+  // Disable webpack stats to reduce build time
+  webpack: (config) => {
+    config.stats = 'minimal'
+    return config
   }
 }
 
