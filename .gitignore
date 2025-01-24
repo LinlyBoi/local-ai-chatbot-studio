@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local development
+start.bat
+temp.txt
+Untitled-1
+Modelfile
+
+# API development
+/API/

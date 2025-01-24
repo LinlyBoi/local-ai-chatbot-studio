@@ -1,21 +1,33 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
+        pathname: '/**',
       }
     ],
   },
-  // Disable webpack stats to reduce build time
-  webpack: (config) => {
-    config.stats = 'minimal'
-    return config
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.(mp4|webm|gif)$/i,
+      type: 'asset/resource',
+    });
+    return config;
+  },
+  devIndicators: {
+    buildActivity: false
   }
+}
+
+// Add GitHub Pages config only when building for production
+if (process.env.NODE_ENV === 'production') {
+  nextConfig.output = 'export'
+  nextConfig.basePath = '/local-ai-chatbot-studio'
+  nextConfig.assetPrefix = '/local-ai-chatbot-studio/'
+  nextConfig.trailingSlash = true
 }
 
 module.exports = nextConfig
