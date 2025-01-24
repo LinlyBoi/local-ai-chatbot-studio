@@ -99,7 +99,7 @@ export default function Home() {
             <div className="mt-32 animate-fade-in-up [animation-delay:800ms]">
               <h2 className="text-3xl font-bold mb-8">Powered By</h2>
               <div className="flex flex-wrap justify-center gap-6">
-                <Badge variant="secondary" className="text-lg py-2 px-6">Next.js 15.1.2</Badge>
+                <Badge variant="secondary" className="text-lg py-2 px-6">Next.js 14.0.4</Badge>
                 <Badge variant="secondary" className="text-lg py-2 px-6">Live2D</Badge>
                 <Badge variant="secondary" className="text-lg py-2 px-6">Ollama</Badge>
                 <Badge variant="secondary" className="text-lg py-2 px-6">Tailwind CSS</Badge>
