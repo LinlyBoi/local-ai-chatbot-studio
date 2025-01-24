@@ -30,8 +30,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
+      - name: Clean install
+        run: rm -rf node_modules package-lock.json
+
       - name: Install dependencies
-        run: npm install --force
+        run: npm install --legacy-peer-deps
         
       - name: Build with Next.js
         run: npm run build
