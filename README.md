@@ -48,8 +48,8 @@ Local Live2D AI Chatbot is a desktop application that enables interactive conver
 
 1. Clone the repository
 ```bash
-git clone https://github.com/markelaugust74/Live2D-AI-Chatbot.git
-cd Live2D-AI-Chatbot
+git clone https://github.com/markelaugust74/local-ai-chatbot-studio.git
+cd local-ai-chatbot-studio
 ```
 
 2. Install dependencies
